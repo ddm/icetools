@@ -22,9 +22,14 @@ if [[ "$UNAME_STR" == "Darwin" ]]; then
 	PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 fi
 
-echo "Building yosys-abc..."
 make clean
-make yosys-abc
+
+if if [[ `uname -a` !== *"raspberrypi"* ]]
+then
+	echo "Building yosys-abc..."
+	uname -a
+	make yosys-abc
+fi
 
 echo "Building yosys..."
 if [[ "$UNAME_STR" == "Darwin" ]] && hash brew 2>/dev/null; then
