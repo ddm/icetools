@@ -21,24 +21,6 @@ else
 	git pull origin master
 fi
 
-if [[ "$UNAME_STR" == "Darwin" ]]; then
-	echo "Patching icestorm..."
-	patch -p1 << EOF
-	diff --git a/iceprog/iceprog.c b/iceprog/iceprog.c
-	index 1288fe3..d9f589f 100644
-	--- a/iceprog/iceprog.c
-	+++ b/iceprog/iceprog.c
-	@@ -25,6 +25,7 @@
-	 #define _GNU_SOURCE
-
-	 #include <ftdi.h>
-	+#include <stdlib.h>
-	 #include <stdio.h>
-	 #include <stdint.h>
-	 #include <stdbool.h>
-EOF
-fi
-
 cd $DIR/icestorm
 
 echo "Building icestorm..."

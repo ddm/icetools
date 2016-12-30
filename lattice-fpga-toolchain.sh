@@ -27,4 +27,3 @@ $DIR/yosys.sh
 
 echo "Installing iverilog..."
 $DIR/iverilog.sh
-
