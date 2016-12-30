@@ -24,7 +24,7 @@ fi
 
 make clean
 
-if if [[ `uname -a` !== *"raspberrypi"* ]]
+if [[ `uname -a` !== *"raspberrypi"* ]]
 then
 	echo "Building yosys-abc..."
 	uname -a
