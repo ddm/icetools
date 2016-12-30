@@ -2,10 +2,7 @@
 
 # See http://www.clifford.at/icestorm/
 
-pushd `dirname $0` > /dev/null
-DIR=`pwd -P`
-popd > /dev/null
-
+DIR=`dirname $0`
 UNAME_STR=`uname`
 
 echo "Installing dependencies..."
@@ -16,14 +13,22 @@ if [[ "$UNAME_STR" == "Linux" ]] && hash apt-get 2>/dev/null; then
 	sudo apt-get install -y build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python python3 libftdi-dev
 fi
 
-echo "Installing icestorm..."
+echo "┌──────────┐"
+echo "│ icestorm │"
+echo "└──────────┘"
 $DIR/icestorm.sh
 
-echo "Installing arachne-pnr..."
+echo "┌─────────────┐"
+echo "│ arachne-pnr │"
+echo "└─────────────┘"
 $DIR/arachne-pnr.sh
 
-echo "Installing yosys..."
+echo "┌───────┐"
+echo "│ yosys │"
+echo "└───────┘"
 $DIR/yosys.sh
 
-echo "Installing iverilog..."
+echo "┌──────────┐"
+echo "│ iverilog │"
+echo "└──────────┘"
 $DIR/iverilog.sh

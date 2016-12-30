@@ -2,10 +2,7 @@
 
 # See https://github.com/cseed/arachne-pnr/blob/master/.travis.yml
 
-pushd `dirname $0` > /dev/null
-DIR=`pwd -P`
-popd > /dev/null
-
+DIR=`dirname $0`
 UNAME_STR=`uname`
 
 if [ ! -d $DIR/iverilog ]; then

@@ -3,10 +3,7 @@
 PYTHONVERSION=3.5
 LIBFTDIVERSION=1.1
 
-pushd `dirname $0` > /dev/null
-DIR=`pwd -P`
-popd > /dev/null
-
+DIR=`dirname $0`
 UNAME_STR=`uname`
 
 if [ ! -d $DIR/yosys ]; then

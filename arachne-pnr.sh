@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-pushd `dirname $0` > /dev/null
-DIR=`pwd -P`
-popd > /dev/null
-
+DIR=`dirname $0`
 UNAME_STR=`uname`
 
 if [ ! -d $DIR/arachne-pnr ]; then
