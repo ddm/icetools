@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PYTHONVERSION=3.5
+PYTHONVERSION=3.6
 LIBFTDIVERSION=1.1
 
 DIR=`dirname $0`

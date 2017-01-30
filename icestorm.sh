@@ -2,7 +2,7 @@
 
 # See http://www.clifford.at/icestorm/
 
-PYTHONVERSION=3.5
+PYTHONVERSION=3.6
 
 DIR=`dirname $0`
 UNAME_STR=`uname`
