@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 PYTHONVERSION=$(python3 --version 2>&1 | egrep -o '3\.[0-9]+')
-LIBFTDIVERSION=1.1
 
 DIR=`dirname $0`
 UNAME_STR=`uname`
