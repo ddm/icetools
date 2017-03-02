@@ -2,7 +2,7 @@
 
 # See http://www.clifford.at/icestorm/
 
-PYTHONVERSION=3.6
+PYTHONVERSION=$(python3 --version 2>&1 | egrep -o '3\.[0-9]+')
 
 DIR=`dirname $0`
 UNAME_STR=`uname`
