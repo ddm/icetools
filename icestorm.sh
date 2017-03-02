@@ -2,9 +2,11 @@
 
 # See http://www.clifford.at/icestorm/
 
-PYTHONVERSION=$(python3 --version 2>&1 | egrep -o '3\.[0-9]+')
+pushd `dirname $0` > /dev/null
+DIR=`pwd -P`
+popd > /dev/null
 
-DIR=`dirname $0`
+PYTHONVERSION=$(python3 --version 2>&1 | egrep -o '3\.[0-9]+')
 UNAME_STR=`uname`
 
 if [ ! -d $DIR/icestorm ]; then

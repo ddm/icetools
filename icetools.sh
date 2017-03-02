@@ -2,7 +2,10 @@
 
 # See http://www.clifford.at/icestorm/
 
-DIR=`dirname $0`
+pushd `dirname $0` > /dev/null
+DIR=`pwd -P`
+popd > /dev/null
+
 UNAME_STR=`uname`
 
 echo "Installing dependencies..."
