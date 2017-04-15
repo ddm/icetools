@@ -16,6 +16,7 @@ RUN apk --no-cache add --virtual build-dependencies \
       libffi-dev \
       libftdi1-dev \
       readline-dev \
+      gperf \
       bash &&\
     git clone --depth 1 https://github.com/cliffordwolf/icestorm.git /tmp/icestorm && cd /tmp/icestorm &&\
     make && make install &&\
