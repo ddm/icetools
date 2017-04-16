@@ -27,5 +27,12 @@ RUN apk --no-cache add --virtual build-dependencies \
     git clone --depth 1 https://github.com/steveicarus/iverilog.git /tmp/iverilog && cd /tmp/iverilog &&\
     autoconf && ./configure && make && make install &&\
     apk del --purge build-dependencies &&\
+    apk --no-cache add --virtual runtime-dependencies \
+      libgcc \
+      libstdc++ \
+      libffi \
+      libftdi1 \
+      readline \
+      tcl &&\
     rm -rf /var/cache/apk/* &&\
     rm -rf /tmp/*
