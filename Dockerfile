@@ -1,6 +1,15 @@
 FROM alpine:3.5
 
-RUN apk --no-cache add --virtual build-dependencies \
+RUN apk --no-cache add --virtual runtime-dependencies \
+      libgcc \
+      libstdc++ \
+      libffi \
+      libftdi1 \
+      readline \
+      tcl \
+      python3 \
+      bash &&\
+    apk --no-cache add --virtual build-dependencies \
       git \
       mercurial \
       clang \
@@ -11,13 +20,11 @@ RUN apk --no-cache add --virtual build-dependencies \
       gawk \
       tcl-dev \
       python \
-      python3 \
       graphviz \
       libffi-dev \
       libftdi1-dev \
       readline-dev \
-      gperf \
-      bash &&\
+      gperf &&\
     git clone --depth 1 https://github.com/cliffordwolf/icestorm.git /tmp/icestorm && cd /tmp/icestorm &&\
     make && make install &&\
     git clone --depth 1 https://github.com/cseed/arachne-pnr.git /tmp/arachne-pnr && cd /tmp/arachne-pnr &&\
@@ -27,12 +34,5 @@ RUN apk --no-cache add --virtual build-dependencies \
     git clone --depth 1 https://github.com/steveicarus/iverilog.git /tmp/iverilog && cd /tmp/iverilog &&\
     autoconf && ./configure && make && make install &&\
     apk del --purge build-dependencies &&\
-    apk --no-cache add --virtual runtime-dependencies \
-      libgcc \
-      libstdc++ \
-      libffi \
-      libftdi1 \
-      readline \
-      tcl &&\
     rm -rf /var/cache/apk/* &&\
     rm -rf /tmp/*
