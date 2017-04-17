@@ -6,8 +6,9 @@ RUN apk --no-cache add --virtual runtime-dependencies \
       libffi \
       libftdi1 \
       readline \
-      tcl \
+      graphviz \
       python3 \
+      tcl \
       bash &&\
     apk --no-cache add --virtual build-dependencies \
       git \
@@ -20,7 +21,6 @@ RUN apk --no-cache add --virtual runtime-dependencies \
       gawk \
       tcl-dev \
       python \
-      graphviz \
       libffi-dev \
       libftdi1-dev \
       readline-dev \
@@ -35,4 +35,10 @@ RUN apk --no-cache add --virtual runtime-dependencies \
     autoconf && ./configure && make && make install &&\
     apk del --purge build-dependencies &&\
     rm -rf /var/cache/apk/* &&\
-    rm -rf /tmp/*
+    rm -rf /tmp/* &&\
+    mkdir -p /workdir &&\
+    adduser -D -u 1000 user &&\
+    chown -R user:user /workdir
+
+USER user
+WORKDIR /workdir
