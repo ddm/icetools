@@ -9,6 +9,7 @@ RUN apk --no-cache add --virtual runtime-dependencies \
       graphviz \
       python3 \
       tcl \
+      make \
       bash &&\
     apk --no-cache add --virtual build-dependencies \
       git \
@@ -36,9 +37,7 @@ RUN apk --no-cache add --virtual runtime-dependencies \
     apk del --purge build-dependencies &&\
     rm -rf /var/cache/apk/* &&\
     rm -rf /tmp/* &&\
-    mkdir -p /workdir &&\
-    adduser -D -u 1000 user &&\
-    chown -R user:user /workdir
+    adduser -D -u 1000 user
 
 USER user
-WORKDIR /workdir
+WORKDIR /tmp

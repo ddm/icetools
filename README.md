@@ -1,18 +1,34 @@
 # IceTools
 
-The icetools suite is built around the icestorm project by Clifford Wolf.
+Open Source FPGA toolkit built around [IceStorm](http://www.clifford.at/icestorm/) and [Yosys](http://www.clifford.at/yosys/) by [Clifford Wolf](http://www.clifford.at/).
 
-## TL;DR
-
-The tools have been packaged in a docker image available both on the [docker hub](https://hub.docker.com/r/dimdm/icetools/) and on [quay.io](https://quay.io/repository/dimdm/icetools).
+## Run with Docker
 
 ```
-docker run dimdm/icetools icepack --help
+docker run dimdm/icetools icepack -h
 ```
 
-## Tools
+## Install locally (Debian || OS X)
 
-1. icestorm for working with iCE40 bitstream files
-2. arachne-pnr for place and route
-3. yosys for Verilog RTL synthesis
-4. iverilog for Verilog simulation
+```
+./icetools.sh
+```
+
+## Toolchain
+
+| Component                                           | Function      | License                                            |
+|-----------------------------------------------------|---------------|----------------------------------------------------|
+| [Yosys](http://www.clifford.at/yosys/)              | Synthesis     | [ISC](https://opensource.org/licenses/ISC)         |
+| [Icarus Verilog](http://iverilog.icarus.com/)       | Simulation    | [GPL-2.0](https://opensource.org/licenses/GPL-2.0) |
+| [Arachne-pnr](https://github.com/cseed/arachne-pnr) | Place & Route | [MIT](https://opensource.org/licenses/MIT)         |
+| [IceStorm](http://www.clifford.at/icestorm/)        | Bitstream     | [ISC](https://opensource.org/licenses/ISC)         |
+
+## Supported FPGAs
+
+iCE40 LP/HX 1K/4K/8K
+
+## Supported Devkits
+
+- [icoBoard](https://shop.trenz-electronic.de/en/TE0887-02M-icoBoard-Version-1.1-with-8-MBit-SRAM)
+- [iCEstick](http://www.latticesemi.com/icestick)
+- [iCE40-HX8K Breakout Board](http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard.aspx)
