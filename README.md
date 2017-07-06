@@ -8,7 +8,7 @@ Open Source FPGA toolkit built around [IceStorm](http://www.clifford.at/icestorm
 docker run dimdm/icetools icepack -h
 ```
 
-## Install locally (Debian || OS X)
+## Install locally (brew || sudo apt-get)
 
 ```
 ./icetools.sh
@@ -32,3 +32,21 @@ iCE40 LP/HX 1K/4K/8K
 - [icoBoard](https://shop.trenz-electronic.de/en/TE0887-02M-icoBoard-Version-1.1-with-8-MBit-SRAM)
 - [iCEstick](http://www.latticesemi.com/icestick)
 - [iCE40-HX8K Breakout Board](http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard.aspx)
+
+## Issues
+
+`iceprog` is not supported in docker and should be installed locally using `./icestorm.sh` which kind of defeats the purpose.
+
+### OS X
+
+To unload the default and vendor drivers in case `iceprog` refuses to connect:
+```
+sudo kextunload -v -b com.apple.driver.AppleUSBFTDI
+sudo kextunload -v -b com.FTDI.driver.FTDIUSBSerialDriver
+```
+
+Reload with
+```
+sudo kextload -v -b com.apple.driver.AppleUSBFTDI
+sudo kextload -v -b com.FTDI.driver.FTDIUSBSerialDriver
+```

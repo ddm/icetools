@@ -12,7 +12,7 @@ if [ ! -d $DIR/arachne-pnr ]; then
 else
 	cd $DIR/arachne-pnr
 	echo "Updating arachne-pnr..."
-	git pull origin master
+	git pull origin master || exit 1
 fi
 
 cd $DIR/arachne-pnr

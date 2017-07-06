@@ -14,7 +14,7 @@ if [ ! -d $DIR/yosys ]; then
 else
 	cd $DIR/yosys
 	echo "Updating yosys..."
-	git pull origin master
+	git pull origin master || exit 1
 fi
 
 cd $DIR/yosys

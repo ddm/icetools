@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# See http://www.clifford.at/icestorm/
-
 pushd `dirname $0` > /dev/null
 DIR=`pwd -P`
 popd > /dev/null
@@ -16,8 +14,7 @@ if [ ! -d $DIR/icestorm ]; then
 else
 	cd $DIR/icestorm
 	echo "Updating icestorm..."
-	git reset HEAD --hard
-	git pull origin master
+	git pull origin master || exit 1
 fi
 
 cd $DIR/icestorm

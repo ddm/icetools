@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# See https://github.com/cseed/arachne-pnr/blob/master/.travis.yml
-
 pushd `dirname $0` > /dev/null
 DIR=`pwd -P`
 popd > /dev/null
@@ -14,7 +12,7 @@ if [ ! -d $DIR/iverilog ]; then
 else
 	cd $DIR/iverilog
 	echo "Updating iverilog..."
-	git pull origin master
+	git pull origin master || exit 1
 fi
 
 cd $DIR/iverilog
