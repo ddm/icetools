@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM arm32v6/alpine:3.6
 
 RUN apk --no-cache add --virtual runtime-dependencies \
       libgcc \
