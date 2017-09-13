@@ -33,7 +33,7 @@ iCE40 LP/HX 1K/4K/8K
 - [icoBoard](https://shop.trenz-electronic.de/en/TE0887-02M-icoBoard-Version-1.1-with-8-MBit-SRAM)
 - [iCEstick](http://www.latticesemi.com/icestick)
 - [iCE40-HX8K Breakout Board](http://www.latticesemi.com/Products/DevelopmentBoardsAndKits/iCE40HX8KBreakoutBoard.aspx)
-- [MyStorm Blackice](https://gitlab.com/Folknology/mystorm)
+- [MyStorm Blackice](https://gitlab.com/Folknology/mystorm/tree/BlackIce)
 
 ## Issues
 
