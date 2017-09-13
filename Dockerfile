@@ -11,6 +11,7 @@ RUN apk --no-cache add --virtual runtime-dependencies \
       readline \
       graphviz \
       python3 \
+      perl \
       tcl \
       make \
       bash &&\
