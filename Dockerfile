@@ -1,5 +1,8 @@
 FROM alpine:3.6
 
+ARG IVERILOG_TAG=v10_2
+ARG VERILATOR_TAG=verilator_3_910
+
 RUN apk --no-cache add --virtual runtime-dependencies \
       libgcc \
       libstdc++ \
@@ -32,7 +35,9 @@ RUN apk --no-cache add --virtual runtime-dependencies \
     make && make install &&\
     git clone --depth 1 https://github.com/cliffordwolf/yosys.git /tmp/yosys && cd /tmp/yosys &&\
     make yosys-abc && make && make install &&\
-    git clone --depth 1 https://github.com/steveicarus/iverilog.git /tmp/iverilog && cd /tmp/iverilog &&\
+    git clone --depth 1 --branch ${IVERILOG_TAG} https://github.com/steveicarus/iverilog.git /tmp/iverilog && cd /tmp/iverilog &&\
+    autoconf && ./configure && make && make install &&\
+    git clone --depth 1 --branch ${VERILATOR_TAG} https://github.com/ddm/verilator.git /tmp/verilator && cd /tmp/verilator &&\
     autoconf && ./configure && make && make install &&\
     apk del --purge build-dependencies &&\
     rm -rf /var/cache/apk/* &&\
