@@ -34,3 +34,8 @@ echo "┌──────────┐"
 echo "│ iverilog │"
 echo "└──────────┘"
 $DIR/iverilog.sh
+
+echo "┌───────────┐"
+echo "│ verilator │"
+echo "└───────────┘"
+$DIR/verilator.sh
