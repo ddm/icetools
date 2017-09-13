@@ -16,12 +16,13 @@ docker run dimdm/icetools icepack -h
 
 ## Toolchain
 
-| Component                                           | Function      | License                                            |
-|-----------------------------------------------------|---------------|----------------------------------------------------|
-| [Yosys](http://www.clifford.at/yosys/)              | Synthesis     | [ISC](https://opensource.org/licenses/ISC)         |
-| [Icarus Verilog](http://iverilog.icarus.com/)       | Simulation    | [GPL-2.0](https://opensource.org/licenses/GPL-2.0) |
-| [Arachne-pnr](https://github.com/cseed/arachne-pnr) | Place & Route | [MIT](https://opensource.org/licenses/MIT)         |
-| [IceStorm](http://www.clifford.at/icestorm/)        | Bitstream     | [ISC](https://opensource.org/licenses/ISC)         |
+| Component                                            | Function      | License                                              |
+|------------------------------------------------------|---------------|------------------------------------------------------|
+| [Yosys](http://www.clifford.at/yosys/)               | Synthesis     | [ISC](https://opensource.org/licenses/ISC)           |
+| [Icarus Verilog](http://iverilog.icarus.com/)        | Simulation    | [GPL-2.0](https://opensource.org/licenses/GPL-2.0)   |
+| [Verilator](https://www.veripool.org/wiki/verilator) | Simulation    | [LGPL-3.0](https://opensource.org/licenses/LGPL-3.0) |
+| [Arachne-pnr](https://github.com/cseed/arachne-pnr)  | Place & Route | [MIT](https://opensource.org/licenses/MIT)           |
+| [IceStorm](http://www.clifford.at/icestorm/)         | Bitstream     | [ISC](https://opensource.org/licenses/ISC)           |
 
 ## Supported FPGAs
 
