@@ -22,6 +22,7 @@ RUN apk --no-cache add --virtual runtime-dependencies \
       autoconf \
       bison \
       flex \
+      flex-dev \
       gawk \
       tcl-dev \
       python \
