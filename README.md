@@ -26,7 +26,7 @@ docker run dimdm/icetools icepack -h
 
 ## Supported FPGAs
 
-iCE40 LP/HX 1K/4K/8K
+iCE40 LP/HX 1K/~~4K~~/8K
 
 ## Supported Devkits
 
