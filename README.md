@@ -5,7 +5,7 @@ Open Source FPGA toolkit built around [IceStorm](http://www.clifford.at/icestorm
 ## Run with Docker
 
 ```
-docker run dimdm/icetools icepack -h
+docker run dimdm/icetools:arm32v6 icepack -h
 ```
 
 ## Install locally (brew || sudo apt-get)
