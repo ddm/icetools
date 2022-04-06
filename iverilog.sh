@@ -8,7 +8,7 @@ UNAME_STR=`uname`
 
 if [ ! -d $DIR/iverilog ]; then
 	echo "Checking out iverilog..."
-	git clone git://github.com/steveicarus/iverilog.git $DIR/iverilog
+	git clone git@github.com:steveicarus/iverilog.git $DIR/iverilog
 else
 	cd $DIR/iverilog
 	echo "Updating iverilog..."
